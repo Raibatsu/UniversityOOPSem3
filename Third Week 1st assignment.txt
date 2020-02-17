@@ -1,0 +1,67 @@
+
+/*
+
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication5;
+import java.util.Scanner;
+/**
+ *
+ * @author test
+ */
+public class JavaApplication5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("-----------");
+        System.out.println("Welcome to");
+        System.out.println("-----------");
+        System.out.println("Character game");
+        char user;
+        System.out.println("Enter input:");
+        user = input.next().charAt(0);
+       boolean a = true;
+       double rand;
+       int num = 0;
+       while(a == true)
+       {
+       rand = random();
+       if(rand >= 65 && rand <= 90)
+       {
+           
+          if(user == (char)rand)
+          {
+              System.out.println("You win!");
+                        break;
+          }
+          else
+          {
+              System.out.println("Incorrect answer. Try again.");
+              user = input.next().charAt(0);
+              num++;
+          }
+          if(num == 4)
+          {
+              System.out.println("You have run out of turns. You lose. The answer was: " + (char)rand);
+              break;
+          }
+
+       }
+       else
+       {
+           rand = random();
+       }
+       }
+    }
+    
+    public static double random(){
+    double rand = Math.random();
+    rand = rand * 100;
+    return rand;
+    }
+}
