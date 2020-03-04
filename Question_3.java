@@ -13,7 +13,7 @@ public class Question_3 {
             int[] rand = new int[n];
             for(int i=0; i<n;i++)
             {
-                System.out.print("Enter value no. " + i+1 + ")");
+                System.out.print("Enter value no. " + (i+1) + ")");
                 value[i] = input.nextInt();
              rand[i] = (int)(Math.random()*10);
             }
